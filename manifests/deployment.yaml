@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: random-logs
+  labels:
+    app: random-logs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: random-logs
+  template:
+    metadata:
+      labels:
+        app: random-logs
+    spec:
+      containers:
+      - name: random-logs
+        image: chentex/random-logger:latest
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "500m"
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+          

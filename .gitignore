@@ -1,0 +1,8 @@
+bin/
+certs/*.cert
+certs/*.crt
+certs/*.srl
+certs/*.key
+certs/*.csr
+certs/*.pem
+.vscode/

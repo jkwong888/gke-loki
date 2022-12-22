@@ -1,0 +1,24 @@
+loki:
+  storage:
+    type: gcs
+    bucketNames:
+      chunks: loki-chunks-8236
+      ruler: loki-ruler-8236
+      admin: loki-admin-8236
+  auth_enabled: false
+
+monitoring:
+  dashboards:
+    enabled: false
+  selfMonitoring: 
+    enabled: false
+    grafanaAgent:
+      installOperator: false
+  serviceMonitor: 
+    enabled: false
+
+serviceAccount:
+  annotations:
+    iam.gke.io/gcp-service-account: lokiiii@jkwng-gke-log-filter-dev-8236.iam.gserviceaccount.com
+
+
